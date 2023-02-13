@@ -42,10 +42,9 @@ const navLinks = ref([
         <div class="container">
             <div class="nav__content">
                 <ul class="nav__list">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <li v-for="navLink in navLinks" class="nav__item">
-                        <a href="#!" class="nav__link">{{ navLink.name }}</a>
-                        <i :class="navLink.icon"></i>
+                    <a href="#!"><i class="fa-solid fa-magnifying-glass nav__search"></i></a>
+                    <li v-for="navLink in navLinks" class="nav__item" @click="navItem">
+                        <a href="#!" class="nav__link">{{ navLink.name }} <i class="icon" :class="navLink.icon"></i></a>
                     </li>
                 </ul>
             </div>
@@ -67,6 +66,28 @@ const navLinks = ref([
 .nav__item {
     display: flex;
     align-items: center;
+    position: relative;
+    transition: 1.5s;
+}
+.nav__item::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    background: #DD4053;
+    width: 0;
+    height: 3px;
+    display: flex;
+    align-items: end;
+    transition: 1.5s;
+    top: 40px;
+    transition: 500ms;
+}
+.nav__item:hover::before {
+    width: 100%;
+}
+.nav__item:hover .icon {
+    transition: 500ms;
+    transform: rotateZ(180deg);
 }
 
 .nav__content {
@@ -82,6 +103,9 @@ const navLinks = ref([
 .nav__item i {
     color: #C4C4C4;
     margin-left: 8px;
-    font-size: 10px;
+    font-size: 12px;
+}
+.nav__search {
+    color: #343434;
 }
 </style>
