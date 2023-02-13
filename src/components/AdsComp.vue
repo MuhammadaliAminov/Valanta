@@ -1,5 +1,15 @@
 <script setup>
-
+import { reactive, ref } from 'vue'
+const prices = ref([
+    {
+        name: 'USD',
+        maney: '28,90'
+    },
+    {
+        name: 'EUR',
+        maney: '35,00'
+    }
+]);
 </script>
 
 <template>
@@ -18,8 +28,7 @@
                 </div>
                 <div class="dash"><span></span></div>
                 <div class="ads__money-box">
-                    <div class="money">USD 28,90</div>
-                    <div class="money">EUR 35,00</div>
+                    <div class="money" v-for="price in prices">{{ price.name }} {{ price.maney }}</div>
                 </div>
                 <div class="dash"><span></span></div>
                 <div class="ads__icons d-flex">
@@ -78,9 +87,11 @@
     background: #4AD295;
     padding: 16.5px 18px;
 }
+
 .search__box:last-of-type {
     margin-left: 30px;
 }
+
 .search__box {
     height: 55px;
     display: flex;
@@ -140,5 +151,9 @@
 .money {
     color: #393939;
     font-size: 15px;
+}
+
+.phone__number {
+    color: #393939;
 }
 </style>
