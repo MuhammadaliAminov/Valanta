@@ -17,7 +17,7 @@ const prices = ref([
         <div class="ads__container">
             <div class="ads__content d-flex align-items-center justify-content-between">
                 <div class="ads__logo">
-                    <a href="#!"><img src="../img/logo/logo (1) 1 (1).svg" alt=""></a>
+                    <a href="#!"><img src="../img/logo/logo.svg" alt=""></a>
                 </div>
                 <div class="dash"><span></span></div>
                 <div class="ads__languages">
@@ -39,11 +39,11 @@ const prices = ref([
                 <div class="dash"><span></span></div>
                 <div class="ads__call-box d-flex">
                     <div class="ads__numbers">
-                        <a href="#!" class="phone__number d-flex">044-537-20-07</a>
-                        <a href="#!" class="phone__number d-flex">068-537-20-07</a>
+                        <a href="#!" class="phone__number d-flex">+99891-916-60-62</a>
+                        <a href="#!" class="phone__number d-flex">+99891-916-60-62</a>
                     </div>
                     <div class="ads__call-box-icon">
-                        <img src="../img/logo/Group (6).svg" alt="">
+                        <img src="../img/logo/phone.svg" alt="">
                     </div>
                 </div>
                 <div class="dash"><span></span></div>

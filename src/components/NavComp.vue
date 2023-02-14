@@ -43,7 +43,7 @@ const navLinks = ref([
             <div class="nav__content">
                 <ul class="nav__list">
                     <a href="#!"><i class="fa-solid fa-magnifying-glass nav__search"></i></a>
-                    <li v-for="navLink in navLinks" class="nav__item" @click="navItem">
+                    <li v-for="navLink in navLinks" class="nav__item">
                         <a href="#!" class="nav__link">{{ navLink.name }} <i class="icon" :class="navLink.icon"></i></a>
                     </li>
                 </ul>
@@ -67,7 +67,6 @@ const navLinks = ref([
     display: flex;
     align-items: center;
     position: relative;
-    transition: 1.5s;
 }
 .nav__item::before {
     content: '';
@@ -76,11 +75,10 @@ const navLinks = ref([
     background: #DD4053;
     width: 0;
     height: 3px;
-    display: flex;
-    align-items: end;
-    transition: 1.5s;
     top: 40px;
     transition: 500ms;
+    display: flex;
+    align-items: center;
 }
 .nav__item:hover::before {
     width: 100%;
