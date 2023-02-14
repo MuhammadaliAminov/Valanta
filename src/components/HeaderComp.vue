@@ -24,10 +24,6 @@ const iconClick = (pressed) => {
                 <div class="header__btn">
                     <button class="btn">Подробнее</button>
                 </div>
-                <div class="header__icon">
-                    <i class="fa-regular fa-circle icon" :class="icon"  @click="pressed"></i>
-                    <i class="fa-solid fa-circle icon" @click="pressed"></i>
-                </div>
             </div>
         </div>
     </header>
@@ -93,11 +89,5 @@ const iconClick = (pressed) => {
 .btn:hover {
     background: rgba(255, 255, 255, 0.556);
     transition: 300ms;
-}
-.icon {
-    opacity: 0.5;
-    color: #FFFFFF;
-    font-size: 8px;
-    cursor: pointer;
 }
 </style>

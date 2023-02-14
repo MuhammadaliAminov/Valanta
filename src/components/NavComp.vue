@@ -1,5 +1,5 @@
 <script setup>
-import { reactive, ref } from 'vue'
+import { reactive, ref } from 'vue';
 const navLinks = ref([
     {
         name: 'Отели',
@@ -34,7 +34,7 @@ const navLinks = ref([
         name: 'Контакты',
     },
 
-])
+]);
 
 </script>
 <template>
